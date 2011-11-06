@@ -15,6 +15,22 @@
 		7514C0DC14654F0700FEF1E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514C0DB14654F0700FEF1E6 /* AppDelegate.m */; };
 		7514C0DF14654F0700FEF1E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514C0DE14654F0700FEF1E6 /* ViewController.m */; };
 		7514C0E214654F0700FEF1E6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7514C0E014654F0700FEF1E6 /* ViewController.xib */; };
+		7514C0EB14654F5C00FEF1E6 /* SEMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514C0EA14654F5C00FEF1E6 /* SEMenuItem.m */; };
+		7514C0EE14654F9C00FEF1E6 /* SESpringBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514C0ED14654F9B00FEF1E6 /* SESpringBoard.m */; };
+		7514C12A1465AA4900FEF1E6 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514C1281465AA4900FEF1E6 /* ChildViewController.m */; };
+		7514C12B1465AA4900FEF1E6 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7514C1291465AA4900FEF1E6 /* ChildViewController.xib */; };
+		7514C12E1465BC5000FEF1E6 /* navbtn_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 7514C12C1465BC5000FEF1E6 /* navbtn_home.png */; };
+		7514C12F1465BC5000FEF1E6 /* navbtn_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7514C12D1465BC5000FEF1E6 /* navbtn_home@2x.png */; };
+		7514C1321465BC9C00FEF1E6 /* SEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514C1311465BC9C00FEF1E6 /* SEViewController.m */; };
+		75272FB51465FC1D004F0CF3 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FAF1465FC1D004F0CF3 /* youtube.png */; };
+		75272FB61465FC1D004F0CF3 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FB01465FC1D004F0CF3 /* twitter.png */; };
+		75272FB71465FC1D004F0CF3 /* rss.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FB11465FC1D004F0CF3 /* rss.png */; };
+		75272FB81465FC1D004F0CF3 /* linkedin.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FB21465FC1D004F0CF3 /* linkedin.png */; };
+		75272FB91465FC1D004F0CF3 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FB31465FC1D004F0CF3 /* google.png */; };
+		75272FBA1465FC1D004F0CF3 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FB41465FC1D004F0CF3 /* facebook.png */; };
+		75272FC21465FF6A004F0CF3 /* technorati.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FBF1465FF6A004F0CF3 /* technorati.png */; };
+		75272FC31465FF6A004F0CF3 /* su.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FC01465FF6A004F0CF3 /* su.png */; };
+		75272FC41465FF6A004F0CF3 /* digg.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FC11465FF6A004F0CF3 /* digg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +38,35 @@
 		7514C0CB14654F0700FEF1E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7514C0CD14654F0700FEF1E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7514C0CF14654F0700FEF1E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7514C0D314654F0700FEF1E6 /* SESpringBoardDemo-Info.plist */ = {isa = PBXFileReference; path = "SESpringBoardDemo-Info.plist"; sourceTree = "<group>"; };
+		7514C0D314654F0700FEF1E6 /* SESpringBoardDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SESpringBoardDemo-Info.plist"; sourceTree = "<group>"; };
 		7514C0D514654F0700FEF1E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7514C0D714654F0700FEF1E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7514C0D914654F0700FEF1E6 /* SESpringBoardDemo-Prefix.pch */ = {isa = PBXFileReference; path = "SESpringBoardDemo-Prefix.pch"; sourceTree = "<group>"; };
-		7514C0DA14654F0700FEF1E6 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		7514C0D914654F0700FEF1E6 /* SESpringBoardDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SESpringBoardDemo-Prefix.pch"; sourceTree = "<group>"; };
+		7514C0DA14654F0700FEF1E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7514C0DB14654F0700FEF1E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7514C0DD14654F0700FEF1E6 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		7514C0DD14654F0700FEF1E6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7514C0DE14654F0700FEF1E6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7514C0E114654F0700FEF1E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		7514C0E914654F5C00FEF1E6 /* SEMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEMenuItem.h; sourceTree = "<group>"; };
+		7514C0EA14654F5C00FEF1E6 /* SEMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEMenuItem.m; sourceTree = "<group>"; };
+		7514C0EC14654F9B00FEF1E6 /* SESpringBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SESpringBoard.h; sourceTree = "<group>"; };
+		7514C0ED14654F9B00FEF1E6 /* SESpringBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SESpringBoard.m; sourceTree = "<group>"; };
+		7514C1271465AA4900FEF1E6 /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		7514C1281465AA4900FEF1E6 /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
+		7514C1291465AA4900FEF1E6 /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
+		7514C12C1465BC5000FEF1E6 /* navbtn_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbtn_home.png; sourceTree = "<group>"; };
+		7514C12D1465BC5000FEF1E6 /* navbtn_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbtn_home@2x.png"; sourceTree = "<group>"; };
+		7514C1301465BC9C00FEF1E6 /* SEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEViewController.h; sourceTree = "<group>"; };
+		7514C1311465BC9C00FEF1E6 /* SEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEViewController.m; sourceTree = "<group>"; };
+		75272FAF1465FC1D004F0CF3 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
+		75272FB01465FC1D004F0CF3 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		75272FB11465FC1D004F0CF3 /* rss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rss.png; sourceTree = "<group>"; };
+		75272FB21465FC1D004F0CF3 /* linkedin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedin.png; sourceTree = "<group>"; };
+		75272FB31465FC1D004F0CF3 /* google.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google.png; sourceTree = "<group>"; };
+		75272FB41465FC1D004F0CF3 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		75272FBF1465FF6A004F0CF3 /* technorati.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = technorati.png; sourceTree = "<group>"; };
+		75272FC01465FF6A004F0CF3 /* su.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = su.png; sourceTree = "<group>"; };
+		75272FC11465FF6A004F0CF3 /* digg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = digg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +86,7 @@
 		7514C0BC14654F0700FEF1E6 = {
 			isa = PBXGroup;
 			children = (
+				7514C0E814654F1F00FEF1E6 /* SESpringBoard */,
 				7514C0D114654F0700FEF1E6 /* SESpringBoardDemo */,
 				7514C0CA14654F0700FEF1E6 /* Frameworks */,
 				7514C0C814654F0700FEF1E6 /* Products */,
@@ -82,6 +119,10 @@
 				7514C0DD14654F0700FEF1E6 /* ViewController.h */,
 				7514C0DE14654F0700FEF1E6 /* ViewController.m */,
 				7514C0E014654F0700FEF1E6 /* ViewController.xib */,
+				7514C1271465AA4900FEF1E6 /* ChildViewController.h */,
+				7514C1281465AA4900FEF1E6 /* ChildViewController.m */,
+				7514C1291465AA4900FEF1E6 /* ChildViewController.xib */,
+				7514C0F714656EF300FEF1E6 /* Icons */,
 				7514C0D214654F0700FEF1E6 /* Supporting Files */,
 			);
 			path = SESpringBoardDemo;
@@ -96,6 +137,38 @@
 				7514C0D914654F0700FEF1E6 /* SESpringBoardDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7514C0E814654F1F00FEF1E6 /* SESpringBoard */ = {
+			isa = PBXGroup;
+			children = (
+				7514C0E914654F5C00FEF1E6 /* SEMenuItem.h */,
+				7514C0EA14654F5C00FEF1E6 /* SEMenuItem.m */,
+				7514C0EC14654F9B00FEF1E6 /* SESpringBoard.h */,
+				7514C0ED14654F9B00FEF1E6 /* SESpringBoard.m */,
+				7514C1301465BC9C00FEF1E6 /* SEViewController.h */,
+				7514C1311465BC9C00FEF1E6 /* SEViewController.m */,
+			);
+			name = SESpringBoard;
+			path = SESpringBoardDemo/SESpringBoard;
+			sourceTree = "<group>";
+		};
+		7514C0F714656EF300FEF1E6 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				75272FBF1465FF6A004F0CF3 /* technorati.png */,
+				75272FC01465FF6A004F0CF3 /* su.png */,
+				75272FC11465FF6A004F0CF3 /* digg.png */,
+				75272FAF1465FC1D004F0CF3 /* youtube.png */,
+				75272FB01465FC1D004F0CF3 /* twitter.png */,
+				75272FB11465FC1D004F0CF3 /* rss.png */,
+				75272FB21465FC1D004F0CF3 /* linkedin.png */,
+				75272FB31465FC1D004F0CF3 /* google.png */,
+				75272FB41465FC1D004F0CF3 /* facebook.png */,
+				7514C12C1465BC5000FEF1E6 /* navbtn_home.png */,
+				7514C12D1465BC5000FEF1E6 /* navbtn_home@2x.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +223,18 @@
 			files = (
 				7514C0D614654F0700FEF1E6 /* InfoPlist.strings in Resources */,
 				7514C0E214654F0700FEF1E6 /* ViewController.xib in Resources */,
+				7514C12B1465AA4900FEF1E6 /* ChildViewController.xib in Resources */,
+				7514C12E1465BC5000FEF1E6 /* navbtn_home.png in Resources */,
+				7514C12F1465BC5000FEF1E6 /* navbtn_home@2x.png in Resources */,
+				75272FB51465FC1D004F0CF3 /* youtube.png in Resources */,
+				75272FB61465FC1D004F0CF3 /* twitter.png in Resources */,
+				75272FB71465FC1D004F0CF3 /* rss.png in Resources */,
+				75272FB81465FC1D004F0CF3 /* linkedin.png in Resources */,
+				75272FB91465FC1D004F0CF3 /* google.png in Resources */,
+				75272FBA1465FC1D004F0CF3 /* facebook.png in Resources */,
+				75272FC21465FF6A004F0CF3 /* technorati.png in Resources */,
+				75272FC31465FF6A004F0CF3 /* su.png in Resources */,
+				75272FC41465FF6A004F0CF3 /* digg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +248,10 @@
 				7514C0D814654F0700FEF1E6 /* main.m in Sources */,
 				7514C0DC14654F0700FEF1E6 /* AppDelegate.m in Sources */,
 				7514C0DF14654F0700FEF1E6 /* ViewController.m in Sources */,
+				7514C0EB14654F5C00FEF1E6 /* SEMenuItem.m in Sources */,
+				7514C0EE14654F9C00FEF1E6 /* SESpringBoard.m in Sources */,
+				7514C12A1465AA4900FEF1E6 /* ChildViewController.m in Sources */,
+				7514C1321465BC9C00FEF1E6 /* SEViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +361,7 @@
 				7514C0E714654F0700FEF1E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
