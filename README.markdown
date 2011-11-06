@@ -4,9 +4,9 @@ SESpringBoard
 Introduction
 ---------------------
 
-SESpringBoard is an easy to use launcher view for you to use in your iPhone apps. 
+SESpringBoard is an easy to use launcher view for you to use in your iPhone apps. Just add all the files under SESpringBoard into your project and you are good to go!
 
-Implementation
+Usage
 ---------------------
 
 ```objective-c
