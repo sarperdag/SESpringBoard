@@ -14,7 +14,7 @@ Usage
 vc1 = [[ChildViewController alloc] initWithNibName:@"ChildViewController" bundle:nil];
 vc2 = [[ChildViewController alloc] initWithNibName:@"ChildViewController" bundle:nil];
 // create or reference more view controllers here
-// ...
+// also be sure to extend your view controllers from SEViewController
     
 // create an array of SEMenuItem objects
 NSMutableArray *items = [NSMutableArray array];
@@ -31,5 +31,6 @@ SESpringBoard *board = [SESpringBoard initWithTitle:@"Welcome" items:items launc
 
 Screenshots
 ---------------------
-Coming Soon!
+
+![alt text](http://s3.amazonaws.com/cocoacontrols_production/ios_screens/424/full.png?1320540435 "SESpringBoard")
 
