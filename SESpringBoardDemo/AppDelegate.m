@@ -3,7 +3,7 @@
 //  SESpringBoardDemo
 //
 //  Created by Sarp Erdag on 11/5/11.
-//  Copyright (c) 2011 Apperto. All rights reserved.
+//  Copyright (c) 2011 Sarp Erdag. All rights reserved.
 //
 
 #import "AppDelegate.h"
