@@ -126,7 +126,7 @@
         [viewToRemove removeFromSuperview];
     }];
     
-    // release the dynamically created navigation var
+    // release the dynamically created navigation bar
     [nav release];
 }
 
