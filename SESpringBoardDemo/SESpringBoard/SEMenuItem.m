@@ -45,12 +45,12 @@
     NSString* shadowText = titleText;
     [[UIColor blackColor] set];
     UIFont *bold14 = [UIFont fontWithName:@"Helvetica-Bold" size:14];
-	[shadowText drawInRect:CGRectMake(0.0, 77.0, 100, 20.0) withFont:bold14 lineBreakMode:UILineBreakModeTailTruncation alignment:UITextAlignmentCenter];
+	[shadowText drawInRect:CGRectMake(0.0, 72.0, 100, 20.0) withFont:bold14 lineBreakMode:UILineBreakModeTailTruncation alignment:UITextAlignmentCenter];
     
     // draw the menu item title
     NSString* text = titleText;
     [[UIColor whiteColor] set];
-	[text drawInRect:CGRectMake(0.0, 75.0, 100, 20.0) withFont:bold14 lineBreakMode:UILineBreakModeTailTruncation alignment:UITextAlignmentCenter];
+	[text drawInRect:CGRectMake(0.0, 70.0, 100, 20.0) withFont:bold14 lineBreakMode:UILineBreakModeTailTruncation alignment:UITextAlignmentCenter];
     
     // place a clickable button on top of everything
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];

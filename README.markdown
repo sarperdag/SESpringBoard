@@ -33,11 +33,11 @@ Screenshots
 ---------------------
 
 ![alt text](http://s3.amazonaws.com/cocoacontrols_production/ios_screens/424/full.png?1320540435 "SESpringBoard")
+![alt text](http://dl.dropbox.com/u/1124427/sespringboard.png "SESpringBoard Paged")
 
 
 Coming Soon
 ---------------------
-- Expandable springboard view with PageControl in the bottom.
 - Ability to customize the navigation bar.
 - Badges and stuff. 
 

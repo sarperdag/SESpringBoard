@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "SEMenuItem.h"
 
-@interface SESpringBoard : UIView <MenuItemDelegate> {
+@interface SESpringBoard : UIView <MenuItemDelegate, UIScrollViewDelegate> {
     UIView *topBar;
     UINavigationController *nav;
+    UIScrollView *itemsContainer;
+    UIPageControl *pageControl;
 } 
 
 @property (nonatomic, retain) NSString *title;

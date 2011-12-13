@@ -32,27 +32,46 @@
         [self addSubview:topBar];
         
         // create a container view to put the menu items inside
-        UIView *itemsContainer = [[UIView alloc] initWithFrame:CGRectMake(10, 60, 300, 416)];
+        itemsContainer = [[UIScrollView alloc] initWithFrame:CGRectMake(10, 50, 300, 400)];
+        itemsContainer.delegate = self;
+        [itemsContainer setScrollEnabled:YES];
+        [itemsContainer setPagingEnabled:YES];
+        itemsContainer.showsHorizontalScrollIndicator = NO;
         [self addSubview:itemsContainer];
         
         self.items = menuItems;
         int counter = 0;
         int horgap = 0;
         int vergap = 0;
+        int numberOfPages = ([menuItems count] / 12) + 1;
+        int currentPage = 0;
         for (SEMenuItem *item in self.items) {
+            currentPage = counter / 12;
             item.tag = counter;
             item.delegate = self;
-            [item setFrame:CGRectMake(item.frame.origin.x + horgap, item.frame.origin.y + vergap, 100, 100)];
+            [item setFrame:CGRectMake(item.frame.origin.x + horgap + (currentPage*300), item.frame.origin.y + vergap, 100, 100)];
             [itemsContainer addSubview:item];
             horgap = horgap + 100;
             counter = counter + 1;
             if(counter % 3 == 0){
-                vergap = vergap + 100;
+                vergap = vergap + 95;
                 horgap = 0;
+            }
+            if (counter % 12 == 0) {
+                vergap = 0;
             }
         }
         
+        [itemsContainer setContentSize:CGSizeMake(numberOfPages*300, itemsContainer.frame.size.height)];
         [itemsContainer release];
+
+        // add a page control representing the page the scrollview controls
+        pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 433, 320, 20)];
+        if (numberOfPages > 1) {
+            pageControl.numberOfPages = numberOfPages;
+            pageControl.currentPage = 0;
+            [self addSubview:pageControl];
+        }
         
         // add listener to detect close view events
         [[NSNotificationCenter defaultCenter]
@@ -73,6 +92,7 @@
     [items release];
     [launcher release];
     [topBar release];
+    [pageControl release];
     [super dealloc];
 }
 
@@ -130,6 +150,10 @@
     [nav release];
 }
 
-
+- (void)scrollViewDidScroll:(UIScrollView *)sender {
+    CGFloat pageWidth = itemsContainer.frame.size.width;
+    int page = floor((itemsContainer.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    pageControl.currentPage = page;
+}
 
 @end
