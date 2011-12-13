@@ -32,7 +32,6 @@ SESpringBoard *board = [SESpringBoard initWithTitle:@"Welcome" items:items launc
 Screenshots
 ---------------------
 
-![alt text](http://s3.amazonaws.com/cocoacontrols_production/ios_screens/424/full.png?1320540435 "SESpringBoard")
 ![alt text](http://dl.dropbox.com/u/1124427/sespringboard.png "SESpringBoard Paged")
 
 
