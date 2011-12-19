@@ -43,7 +43,7 @@
         int counter = 0;
         int horgap = 0;
         int vergap = 0;
-        int numberOfPages = ([menuItems count] / 12) + 1;
+        int numberOfPages = (ceil((float)[menuItems count] / 12));
         int currentPage = 0;
         for (SEMenuItem *item in self.items) {
             currentPage = counter / 12;
