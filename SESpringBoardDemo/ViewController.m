@@ -17,8 +17,7 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     vc1 = [[ChildViewController alloc] initWithNibName:@"ChildViewController" bundle:nil];

@@ -29,10 +29,26 @@
 
 #pragma mark - View lifecycle
 
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
+    
+    // place any dynamic stuff you want to initialize in the child view here
+    
+    UIBarButtonItem *buttonItemDoSomething = [[[ UIBarButtonItem alloc ] initWithTitle: @"DoSomething" style: UIBarButtonItemStyleBordered target:self action: @selector(onCreate:) ] autorelease];
+    
+    NSArray *toolBarItems = [[[NSArray alloc] initWithObjects:buttonItemDoSomething, nil] autorelease];
+    
+    [self.navigationController setToolbarHidden:NO];
+    
+    self.toolbarItems = toolBarItems;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
 }
 
 - (void)viewDidUnload

@@ -108,8 +108,13 @@
     // create a navigation bar
     nav = [UINavigationController alloc];
     SEViewController *vc = viewController;
+    
+    // manually trigger the appear method
+    [viewController viewDidAppear:YES];
+    
     vc.launcherImage = launcher;
     [nav initWithRootViewController:viewController];
+    [nav viewDidAppear:YES];
     
     nav.view.alpha = 0.f;
     nav.view.transform = CGAffineTransformMakeScale(.1f, .1f);
@@ -132,7 +137,7 @@
     }];
 }
 
--(void)closeViewEventHandler: (NSNotification *) notification {
+- (void)closeViewEventHandler: (NSNotification *) notification {
     UIView *viewToRemove = (UIView *) notification.object;    
     [UIView animateWithDuration:.3f animations:^{
         viewToRemove.alpha = 0.f;
