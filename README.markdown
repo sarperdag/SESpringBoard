@@ -18,10 +18,10 @@ vc2 = [[ChildViewController alloc] initWithNibName:@"ChildViewController" bundle
     
 // create an array of SEMenuItem objects
 NSMutableArray *items = [NSMutableArray array];
-[items addObject:[SEMenuItem initWithTitle:@"facebook" imageName:@"facebook.png" viewController:vc1]];
-[items addObject:[SEMenuItem initWithTitle:@"twitter" imageName:@"twitter.png" viewController:vc2]];
-[items addObject:[SEMenuItem initWithTitle:@"youtube" imageName:@"youtube.png" viewController:vc1]];
-[items addObject:[SEMenuItem initWithTitle:@"linkedin" imageName:@"linkedin.png" viewController:vc2]];
+[items addObject:[SEMenuItem initWithTitle:@"facebook" imageName:@"facebook.png" viewController:vc1 removable:YES]];
+[items addObject:[SEMenuItem initWithTitle:@"twitter" imageName:@"twitter.png" viewController:vc2 removable:NO]];
+[items addObject:[SEMenuItem initWithTitle:@"youtube" imageName:@"youtube.png" viewController:vc1 removable:YES]];
+[items addObject:[SEMenuItem initWithTitle:@"linkedin" imageName:@"linkedin.png" viewController:vc2 removable:NO]];
     
 // pass the array to a newly created SESpringBoard and add it to your view
 SESpringBoard *board = [SESpringBoard initWithTitle:@"Welcome" items:items launcherImage:[UIImage imageNamed:@"navbtn_home.png"]];
@@ -33,11 +33,13 @@ Screenshots
 ---------------------
 
 ![alt text](http://dl.dropbox.com/u/1124427/sespringboard.png "SESpringBoard Paged")
+![alt text](http://dl.dropbox.com/u/1124427/sepringboard_wiggle.png "SESpringBoard Wiggling")
+
 
 
 Coming Soon
 ---------------------
-- Ability to customize the navigation bar.
+- Ability to drag menu items and change their locations.
 - Badges and stuff. 
 
 

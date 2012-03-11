@@ -31,6 +31,8 @@
 		75272FC21465FF6A004F0CF3 /* technorati.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FBF1465FF6A004F0CF3 /* technorati.png */; };
 		75272FC31465FF6A004F0CF3 /* su.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FC01465FF6A004F0CF3 /* su.png */; };
 		75272FC41465FF6A004F0CF3 /* digg.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FC11465FF6A004F0CF3 /* digg.png */; };
+		7576E995150A266D002836BE /* btn_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 7576E994150A266D002836BE /* btn_delete.png */; };
+		7576E99C150A287E002836BE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7576E99B150A287E002836BE /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		75272FBF1465FF6A004F0CF3 /* technorati.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = technorati.png; sourceTree = "<group>"; };
 		75272FC01465FF6A004F0CF3 /* su.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = su.png; sourceTree = "<group>"; };
 		75272FC11465FF6A004F0CF3 /* digg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = digg.png; sourceTree = "<group>"; };
+		7576E994150A266D002836BE /* btn_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_delete.png; sourceTree = "<group>"; };
+		7576E99B150A287E002836BE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7576E99C150A287E002836BE /* QuartzCore.framework in Frameworks */,
 				7514C0CC14654F0700FEF1E6 /* UIKit.framework in Frameworks */,
 				7514C0CE14654F0700FEF1E6 /* Foundation.framework in Frameworks */,
 				7514C0D014654F0700FEF1E6 /* CoreGraphics.framework in Frameworks */,
@@ -104,6 +109,7 @@
 		7514C0CA14654F0700FEF1E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7576E99B150A287E002836BE /* QuartzCore.framework */,
 				7514C0CB14654F0700FEF1E6 /* UIKit.framework */,
 				7514C0CD14654F0700FEF1E6 /* Foundation.framework */,
 				7514C0CF14654F0700FEF1E6 /* CoreGraphics.framework */,
@@ -142,6 +148,7 @@
 		7514C0E814654F1F00FEF1E6 /* SESpringBoard */ = {
 			isa = PBXGroup;
 			children = (
+				7576E994150A266D002836BE /* btn_delete.png */,
 				7514C0E914654F5C00FEF1E6 /* SEMenuItem.h */,
 				7514C0EA14654F5C00FEF1E6 /* SEMenuItem.m */,
 				7514C0EC14654F9B00FEF1E6 /* SESpringBoard.h */,
@@ -235,6 +242,7 @@
 				75272FC21465FF6A004F0CF3 /* technorati.png in Resources */,
 				75272FC31465FF6A004F0CF3 /* su.png in Resources */,
 				75272FC41465FF6A004F0CF3 /* digg.png in Resources */,
+				7576E995150A266D002836BE /* btn_delete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
