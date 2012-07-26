@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0159A72915C14CE900F71157 /* UIViewController+SEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159A72815C14CE900F71157 /* UIViewController+SEViewController.m */; };
 		7514C0CC14654F0700FEF1E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7514C0CB14654F0700FEF1E6 /* UIKit.framework */; };
 		7514C0CE14654F0700FEF1E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7514C0CD14654F0700FEF1E6 /* Foundation.framework */; };
 		7514C0D014654F0700FEF1E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7514C0CF14654F0700FEF1E6 /* CoreGraphics.framework */; };
@@ -21,7 +22,6 @@
 		7514C12B1465AA4900FEF1E6 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7514C1291465AA4900FEF1E6 /* ChildViewController.xib */; };
 		7514C12E1465BC5000FEF1E6 /* navbtn_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 7514C12C1465BC5000FEF1E6 /* navbtn_home.png */; };
 		7514C12F1465BC5000FEF1E6 /* navbtn_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7514C12D1465BC5000FEF1E6 /* navbtn_home@2x.png */; };
-		7514C1321465BC9C00FEF1E6 /* SEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7514C1311465BC9C00FEF1E6 /* SEViewController.m */; };
 		75272FB51465FC1D004F0CF3 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FAF1465FC1D004F0CF3 /* youtube.png */; };
 		75272FB61465FC1D004F0CF3 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FB01465FC1D004F0CF3 /* twitter.png */; };
 		75272FB71465FC1D004F0CF3 /* rss.png in Resources */ = {isa = PBXBuildFile; fileRef = 75272FB11465FC1D004F0CF3 /* rss.png */; };
@@ -36,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0159A72715C14CE900F71157 /* UIViewController+SEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SEViewController.h"; sourceTree = "<group>"; };
+		0159A72815C14CE900F71157 /* UIViewController+SEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SEViewController.m"; sourceTree = "<group>"; };
 		7514C0C714654F0700FEF1E6 /* SESpringBoardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SESpringBoardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7514C0CB14654F0700FEF1E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7514C0CD14654F0700FEF1E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,8 +60,6 @@
 		7514C1291465AA4900FEF1E6 /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
 		7514C12C1465BC5000FEF1E6 /* navbtn_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbtn_home.png; sourceTree = "<group>"; };
 		7514C12D1465BC5000FEF1E6 /* navbtn_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbtn_home@2x.png"; sourceTree = "<group>"; };
-		7514C1301465BC9C00FEF1E6 /* SEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEViewController.h; sourceTree = "<group>"; };
-		7514C1311465BC9C00FEF1E6 /* SEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEViewController.m; sourceTree = "<group>"; };
 		75272FAF1465FC1D004F0CF3 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
 		75272FB01465FC1D004F0CF3 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		75272FB11465FC1D004F0CF3 /* rss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rss.png; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 				7514C0EA14654F5C00FEF1E6 /* SEMenuItem.m */,
 				7514C0EC14654F9B00FEF1E6 /* SESpringBoard.h */,
 				7514C0ED14654F9B00FEF1E6 /* SESpringBoard.m */,
-				7514C1301465BC9C00FEF1E6 /* SEViewController.h */,
-				7514C1311465BC9C00FEF1E6 /* SEViewController.m */,
+				0159A72715C14CE900F71157 /* UIViewController+SEViewController.h */,
+				0159A72815C14CE900F71157 /* UIViewController+SEViewController.m */,
 			);
 			name = SESpringBoard;
 			path = SESpringBoardDemo/SESpringBoard;
@@ -259,7 +259,7 @@
 				7514C0EB14654F5C00FEF1E6 /* SEMenuItem.m in Sources */,
 				7514C0EE14654F9C00FEF1E6 /* SESpringBoard.m in Sources */,
 				7514C12A1465AA4900FEF1E6 /* ChildViewController.m in Sources */,
-				7514C1321465BC9C00FEF1E6 /* SEViewController.m in Sources */,
+				0159A72915C14CE900F71157 /* UIViewController+SEViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

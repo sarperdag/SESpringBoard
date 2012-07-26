@@ -7,7 +7,7 @@
 //
 
 #import "SESpringBoard.h"
-#import "SEViewController.h"
+#import "UIViewController+SEViewController.h"
 
 @implementation SESpringBoard
 
@@ -92,7 +92,7 @@
         
         [itemsContainer setContentSize:CGSizeMake(numberOfPages*300, itemsContainer.frame.size.height)];
         [itemsContainer release];
-
+        
         // add a page control representing the page the scrollview controls
         pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 433, 320, 20)];
         if (numberOfPages > 1) {
@@ -135,7 +135,7 @@
 
 #pragma mark - MenuItem Delegate Methods
 
-- (void)launch:(int)tag :viewController {
+- (void)launch:(int)index:(UIViewController *)viewController {
     
     // if the springboard is in editing mode, do not launch any view controller
     if (isInEditingMode)
@@ -146,12 +146,15 @@
     
     // create a navigation bar
     nav = [UINavigationController alloc];
-    SEViewController *vc = viewController;
+    
+    
     
     // manually trigger the appear method
     [viewController viewDidAppear:YES];
     
-    vc.launcherImage = launcher;
+    
+    [viewController setupCloseButtonWithImage:launcher];
+    
     [nav initWithRootViewController:viewController];
     [nav viewDidAppear:YES];
     
@@ -190,13 +193,13 @@
     int mult = ((int)menuItem.frame.origin.y) / 95;
     int add = ((int)menuItem.frame.origin.x % 300)/100;
     int pageSpecificIndex = (mult*3) + add;
-    int remainingNumberOfItemsInPage = numberOfItemsInCurrentPage-pageSpecificIndex;    
+    int remainingNumberOfItemsInPage = numberOfItemsInCurrentPage-pageSpecificIndex;
     
     // Select the items listed after the deleted menu item
     // and move each of the ones on the current page, one step back.
     // The first item of each row becomes the last item of the previous row.
     for (int i = index+1; i<[items count]; i++) {
-        SEMenuItem *item = [items objectAtIndex:i];   
+        SEMenuItem *item = [items objectAtIndex:i];
         [UIView animateWithDuration:0.2 animations:^{
             
             // Only reposition the items in the current page, coming after the current item
@@ -206,14 +209,14 @@
                 // Check if it is the first item in the row
                 if (intVal % 3 == 0)
                     [item setFrame:CGRectMake(item.frame.origin.x+200, item.frame.origin.y-95, item.frame.size.width, item.frame.size.height)];
-                else 
+                else
                     [item setFrame:CGRectMake(item.frame.origin.x-100, item.frame.origin.y, item.frame.size.width, item.frame.size.height)];
-            }            
+            }
             
-            // Update the tag to match with the index. Since the an item is being removed from the array, 
+            // Update the tag to match with the index. Since the an item is being removed from the array,
             // all the items' tags coming after the current item has to be decreased by 1.
             [item updateTag:item.tag-1];
-        }]; 
+        }];
     }
     // remove the item from the array of items
     [items removeObjectAtIndex:index];
@@ -223,7 +226,7 @@
 }
 
 - (void)closeViewEventHandler: (NSNotification *) notification {
-    UIView *viewToRemove = (UIView *) notification.object;    
+    UIView *viewToRemove = (UIView *) notification.object;
     [UIView animateWithDuration:.3f animations:^{
         viewToRemove.alpha = 0.f;
         viewToRemove.transform = CGAffineTransformMakeScale(.1f, .1f);
