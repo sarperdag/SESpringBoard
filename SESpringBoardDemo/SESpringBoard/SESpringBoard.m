@@ -25,17 +25,11 @@
         self.isInEditingMode = NO;
         
         // create the top bar
-        self.title = boardTitle;
         navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
         
-        // add a simple for displaying a title on the bar
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-        titleLabel.textColor = [UIColor whiteColor];
-        titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.textAlignment = UITextAlignmentCenter;
-        [titleLabel setText:title];
-        [navigationBar addSubview:titleLabel];
-        [titleLabel release];
+        // add title for the navigation bar
+        UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:boardTitle];
+        navigationBar.items = [NSArray arrayWithObject:navigationItem];
         
         // add a button to the right side that will become visible when the items are in editing mode
         // clicking this button ends editing mode for all items on the springboard
