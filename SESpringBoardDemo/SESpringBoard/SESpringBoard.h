@@ -15,7 +15,7 @@
     UIScrollView *itemsContainer;
     UIPageControl *pageControl;
     UIButton *doneEditingButton;
-} 
+}
 
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) UIImage *launcher;

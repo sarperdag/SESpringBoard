@@ -14,7 +14,7 @@
     NSString *titleText;
     UIViewController *vcToLoad;
     id <MenuItemDelegate> delegate;
-    UIButton *removeButton;   
+    UIButton *removeButton;
 }
 
 @property (nonatomic, assign) int tag;
@@ -22,7 +22,7 @@
 @property BOOL isInEditingMode;
 @property (nonatomic, assign) id <MenuItemDelegate> delegate;
 
-+ (id) initWithTitle:(NSString *)title imageName:(NSString *)imageName viewController:(UIViewController *)viewController removable:(BOOL)removable;
++ (id) initWithTitle:(NSString *)title frame:(CGRect)frame imageName:(NSString *)imageName viewController:(UIViewController *)viewController removable:(BOOL)removable;
 
 - (void) enableEditing;
 - (void) disableEditing;
@@ -33,7 +33,7 @@
 @protocol MenuItemDelegate <NSObject>
 @optional
 
-- (void)launch:(int)index :(UIViewController *)vcToLoad;
+- (void)launch:(int)index withVCToLoad:(UIViewController *)viewController;
 - (void)removeFromSpringboard:(int)index;
 
 @end
