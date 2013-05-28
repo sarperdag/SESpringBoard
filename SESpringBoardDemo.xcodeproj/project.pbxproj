@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0159A72915C14CE900F71157 /* UIViewController+SEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0159A72815C14CE900F71157 /* UIViewController+SEViewController.m */; };
+		2395DC6817539CA6002534FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2395DC6717539CA6002534FF /* Default-568h@2x.png */; };
 		7514C0CC14654F0700FEF1E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7514C0CB14654F0700FEF1E6 /* UIKit.framework */; };
 		7514C0CE14654F0700FEF1E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7514C0CD14654F0700FEF1E6 /* Foundation.framework */; };
 		7514C0D014654F0700FEF1E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7514C0CF14654F0700FEF1E6 /* CoreGraphics.framework */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		0159A72715C14CE900F71157 /* UIViewController+SEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SEViewController.h"; sourceTree = "<group>"; };
 		0159A72815C14CE900F71157 /* UIViewController+SEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SEViewController.m"; sourceTree = "<group>"; };
+		2395DC6717539CA6002534FF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7514C0C714654F0700FEF1E6 /* SESpringBoardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SESpringBoardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7514C0CB14654F0700FEF1E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7514C0CD14654F0700FEF1E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +93,7 @@
 		7514C0BC14654F0700FEF1E6 = {
 			isa = PBXGroup;
 			children = (
+				2395DC6717539CA6002534FF /* Default-568h@2x.png */,
 				7514C0E814654F1F00FEF1E6 /* SESpringBoard */,
 				7514C0D114654F0700FEF1E6 /* SESpringBoardDemo */,
 				7514C0CA14654F0700FEF1E6 /* Frameworks */,
@@ -243,6 +246,7 @@
 				75272FC31465FF6A004F0CF3 /* su.png in Resources */,
 				75272FC41465FF6A004F0CF3 /* digg.png in Resources */,
 				7576E995150A266D002836BE /* btn_delete.png in Resources */,
+				2395DC6817539CA6002534FF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

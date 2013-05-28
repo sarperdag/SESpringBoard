@@ -19,7 +19,7 @@
 
 - (void) clickItem:(id) sender {
     UIButton *theButton = (UIButton *) sender;
-    [[self delegate] launch:theButton.tag :vcToLoad];
+    [[self delegate] launch:theButton.tag withVCToLoad:vcToLoad];
 }
 
 - (void) pressedLong:(id) sender {
@@ -33,7 +33,7 @@
 #pragma mark - Custom Methods
 
 - (void) enableEditing {
-
+    
     if (self.isInEditingMode == YES)
         return;
     
@@ -47,20 +47,20 @@
     CATransform3D transform;
     
     if (arc4random() % 2 == 1)
-        transform = CATransform3DMakeRotation(-0.08, 0, 0, 1.0);  
+        transform = CATransform3DMakeRotation(-0.08, 0, 0, 1.0);
     else
-        transform = CATransform3DMakeRotation(0.08, 0, 0, 1.0);  
+        transform = CATransform3DMakeRotation(0.08, 0, 0, 1.0);
     
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform"];  
-    animation.toValue = [NSValue valueWithCATransform3D:transform];  
-    animation.autoreverses = YES;   
-    animation.duration = 0.1;   
-    animation.repeatCount = 10000;   
-    animation.delegate = self;  
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform"];
+    animation.toValue = [NSValue valueWithCATransform3D:transform];
+    animation.autoreverses = YES;
+    animation.duration = 0.1;
+    animation.repeatCount = 10000;
+    animation.delegate = self;
     [[self layer] addAnimation:animation forKey:@"wiggleAnimation"];
     
     // inform the springboard that the menu items are now editable so that the springboard
-    // will place a done button on the navigationbar 
+    // will place a done button on the navigationbar
     [(SESpringBoard *)self.delegate enableEditingMode];
     
 }
@@ -78,8 +78,9 @@
 
 #pragma mark - Initialization
 
-- (id) initWithTitle:(NSString *)title :(NSString *)imageName :(UIViewController *)viewController :(BOOL)removable {
-    self = [super initWithFrame:CGRectMake(0, 0, 100, 100)];
+- (id) initWithTitle:(NSString *)title frame:(CGRect)frame imageName:(NSString *)imageName viewController:(UIViewController *)viewController canBeRemoved:(BOOL)removable
+{
+    self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         vcToLoad = viewController;
@@ -91,9 +92,14 @@
     return self;
 }
 
-+ (id) initWithTitle:(NSString *)title imageName:(NSString *)imageName viewController:(UIViewController *)viewController removable:(BOOL)removable  {
-	SEMenuItem *tmpInstance = [[[SEMenuItem alloc] initWithTitle:title :imageName :viewController :removable] autorelease];
++ (id) initWithTitle:(NSString *)title frame:(CGRect)frame imageName:(NSString *)imageName viewController:(UIViewController *)viewController removable:(BOOL)removable  {
+	SEMenuItem *tmpInstance = [[[SEMenuItem alloc] initWithTitle:title frame:frame imageName:imageName viewController:viewController canBeRemoved:removable] autorelease];
 	return tmpInstance;
+}
+
+-(NSString *) description
+{
+    return [NSString stringWithFormat:@"<%@: %p FRAME:(%f, %f, %f, %f) TAG: %d IMAGE: %@ TITLE_TEXT: %@ VIEW_CONTROLLER_TO_LOAD: %@ DELEGATE: %@ REMOVE_BUTTON:%@ IS_REMOVABLE?: %@ IS_IN_EDITING_MODE?: %@>", @"SEMenuItem", self, self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height, self.tag, image, titleText, vcToLoad, delegate, removeButton, (isRemovable ? @"YES" : @"NO"), (isInEditingMode ? @"YES" : @"NO")];
 }
 
 # pragma mark - Overriding UiView Methods
@@ -106,12 +112,12 @@
         [removeButton setFrame:CGRectMake(0, 0, 0, 0)];
     }completion:^(BOOL finished) {
         [super removeFromSuperview];
-    }]; 
+    }];
 }
 
 # pragma mark - Drawing
 
-- (void) drawRect:(CGRect)rect {    
+- (void) drawRect:(CGRect)rect {
     // draw the icon image
     UIImage* img = [UIImage imageNamed:image];
     [img drawInRect:CGRectMake(20.0, 10.0, 60, 60)];
@@ -151,6 +157,5 @@
         [self addSubview:removeButton];
     }
 }
-
 
 @end
