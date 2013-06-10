@@ -109,7 +109,8 @@
         // add listener to detect close view events
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeViewEventHandler:) name:@"closeView" object:nil];
         
-        self.backgroundColor = [UIColor blackColor];
+        // allow background color to be set
+        self.backgroundColor = [UIColor lightGrayColor];
     }
     return self;
 }
