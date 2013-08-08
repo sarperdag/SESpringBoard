@@ -105,8 +105,12 @@
             pageControl.currentPage = 0;
             [self addSubview:pageControl];
         }
+
         // add listener to detect close view events
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeViewEventHandler:) name:@"closeView" object:nil];
+        
+        // allow background color to be set
+        self.backgroundColor = [UIColor lightGrayColor];
     }
     return self;
 }

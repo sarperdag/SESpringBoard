@@ -132,7 +132,7 @@
     NSString* text = titleText;
     [[UIColor whiteColor] set];
 	[text drawInRect:CGRectMake(0.0, 70.0, 100, 20.0) withFont:bold14 lineBreakMode:UILineBreakModeTailTruncation alignment:UITextAlignmentCenter];
-    
+
     // place a clickable button on top of everything
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(0, 0, 100, 110)];
@@ -144,7 +144,7 @@
     [button addGestureRecognizer:longPress];
     [longPress release];
     [self addSubview:button];
-    
+
     if (self.isRemovable) {
         // place a remove button on top right corner for removing item from the board
         removeButton = [UIButton buttonWithType:UIButtonTypeCustom];
